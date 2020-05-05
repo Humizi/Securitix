@@ -1,0 +1,10 @@
+.feedback {
+  margin-top: 170px;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .feedback {
+    margin-top: 50px;
+  }
+}

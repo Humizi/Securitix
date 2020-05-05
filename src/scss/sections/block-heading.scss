@@ -1,0 +1,118 @@
+.block-heading {
+  margin-bottom: 100px;
+  padding-bottom: 300px;
+
+  background-image: url('../assets/img/laptop.svg');
+  background-position: 82% 65%;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: 4rem;
+    line-height: 120%;
+    color: #fff;
+  }
+
+  &__description {
+    margin-bottom: 65px;
+
+    font-size: $font-size-24px;
+    line-height: 130%;
+    font-weight: 400;
+    color: rgba($color: #fff, $alpha: 0.3);
+  }
+
+  &__wrapper-buttons {
+    .button {
+      min-height: 65px;
+      padding: 18px 24px;
+
+      font-size: $font-size-24px;
+      line-height: $line-height-28px;
+    }
+
+    .block-heading__button--download {
+      min-width: 190px;
+      margin-right: 25px;
+    }
+  }
+
+  &__button--sign-in {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .block-heading {
+    position: relative;
+
+    background-image: none;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 250px;
+      left: calc(70% - 270px/2);
+
+      width: 270px;
+      height: 270px;
+
+      background-image: url('../assets/img/laptop--mobile.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    &__title {
+      font-size: 3.625rem;
+      line-height: 120%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .block-heading {
+    margin-bottom: 0;
+    padding-bottom: 275px;
+    
+    background-image: url('../assets/img/triangle.svg');
+    background-position:100% 100.2%;
+    background-repeat: no-repeat;
+    background-size: contain; 
+
+    &::after {
+      bottom: -55px;
+      left: calc(50% - 270px/2);
+    }
+
+    &__title {
+      margin-bottom: 20px;
+
+      font-size: $font-size-28px;
+      line-height: 120%;
+    }
+
+    &__description {
+      margin-bottom: 20px;
+
+      font-size: 1rem;
+      line-height: 130%;
+    }
+
+    &__wrapper-buttons {
+      .button {
+        min-height: 47px;
+        padding: 14px;
+  
+        font-size: 1rem;
+        line-height: $line-height-20px;
+      }
+  
+      .block-heading__button--download {
+        min-width: 125px;
+        margin-right: 25px;
+      }
+    }
+  }
+}

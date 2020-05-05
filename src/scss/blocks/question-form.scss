@@ -1,0 +1,73 @@
+.question-form {
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: $font-size-48px;
+    line-height: 130%;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-size: $font-size-14px;
+    line-height: 150%;
+    font-weight: 300;
+    color: rgba($color: $color-black, $alpha: 0.7);
+  }
+
+  input,
+  textarea {
+    box-sizing: border-box;
+    padding: 10px 15px;
+
+    font-family: 'Leto', sans-serif;
+    font-size: $font-size-14px;
+    line-height: 150%;
+    font-weight: 300;
+    color: $color-black;
+
+    border: 1px solid rgba($color: $color-black, $alpha: 0.1);
+    border-radius: 10px;
+
+    &::placeholder {
+      color: rgba($color: $color-black, $alpha: 0.3);
+    }
+  }
+
+  textarea {
+    margin: 20px 0;
+  }
+
+  &__button {
+    font-size: $font-size-14px;
+    line-height: 150%;
+  }
+}
+
+@media(max-width: 1200px) {
+  .question-form {
+    &__form {
+      input:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .question-form {
+    &__title {
+      font-size: $font-size-40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .question-form {
+    margin-top: 50px;
+    
+    &__title {
+      font-size: $font-size-24px;
+    }
+  }
+}

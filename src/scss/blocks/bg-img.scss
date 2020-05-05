@@ -1,0 +1,16 @@
+.bg-img {
+  background-image: url('../assets/img/bg-top.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .bg-img {
+    
+
+    background-image: url('../assets/img/bg-top.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}

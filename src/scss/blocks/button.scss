@@ -1,0 +1,114 @@
+.button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  min-height: 40px;
+  padding: 9px 18px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: $font-size-18px;
+  line-height: $line-height-22px;
+  font-weight: 700;
+  color: #fff;
+
+  background-color: rgba($color: #fff, $alpha: 0.1);
+
+  border: none;
+  border-radius: 100px;
+
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $color-black;
+
+    background-color: #fff;
+  }
+
+  &--green {
+    background-color: $color-green;
+    box-shadow: 0px 10px 40px rgba(0, 170, 27, 0.6);
+
+    svg {
+      margin-right: 10px;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-green;
+  
+      background-color: #fff;
+
+      path {
+        fill: $color-green;
+        stroke: $color-green;
+      }
+    }
+  }
+
+  &--white {
+    color: $color-purple;
+
+    background-color: #fff;
+
+    &:focus,
+    &:hover {
+      color: #fff;
+
+      background-color: rgba($color: #fff, $alpha: 0.1);
+    }
+  }
+
+  &--purple {
+    color: #fff;
+
+    background-color: $color-purple;
+  }
+
+  &--slider {
+    top: 190px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: $color-purple;
+    background-image: url('../assets/img/btn-arrow.svg');
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+    border-radius: 50%;
+
+    &-prev {
+      right: 50px;
+
+      transform: rotate(-180deg);
+    }
+
+    &-next {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    &--slider {
+      width: 30px;
+      height: 30px;
+
+      background-size: 15px 15px;
+
+      &-prev {
+        top: 65px;
+        right: 50px;
+  
+        transform: rotate(-180deg);
+      }
+
+      &-next {
+        top: 65px;
+      }
+    }
+  }
+}

@@ -1,0 +1,222 @@
+.testimonals { 
+  position: relative;
+
+  &__title {
+    position: absolute;
+    top: 150px;
+    left: 0;
+
+    font-size: $font-size-48px;
+    line-height: 130%;
+  }
+
+  &__wrapper {
+    margin-top: 100px;
+    padding-bottom: 150px;
+  }
+
+  &__img {
+    max-width: 240px;
+    height: 240px;
+    margin-right: 40px;
+  }
+
+  &__content {
+    position: relative;
+    padding: 38px;
+
+    border-radius: 10px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05);
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      width: 40px;
+      height: 40px;
+
+      background-image: url('../assets/img/quote.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      top: -15px;
+      left: -10px;
+    }
+
+    &::after {
+      bottom: -15px;
+      right: -5px;
+
+      transform: rotate(180deg);
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    font-size: $font-size-24px;
+    line-height: $line-height-28px;
+  }
+
+  &__profession {
+    margin-bottom: 20px;
+
+    font-size: $font-size-14px;
+    line-height: 150%;
+    font-weight: 300;
+    color: rgba($color: #000, $alpha: 0.3);
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: $font-size-18px;
+    line-height: 150%;
+    color: $color-black;
+  }
+}
+
+@media (max-width: 1280px) {
+  .testimonals {
+    &__img {
+      max-width: 20%;
+      height: 25%;
+      margin-right: 10px;
+    }
+
+    &__content {
+      &::after {
+        right: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .testimonals {
+    &__wrapper {
+      margin-top: 30px;
+    }
+
+    &__title {
+      font-size: $font-size-40px;
+    }
+
+    &__img {
+      position: absolute;
+      z-index: 5;
+      top: 30px;
+      left: 5px;
+      
+      max-width: 16.666667%;
+      margin-right: 0;
+    }
+
+    &__content {
+      margin-top: 30px;
+      padding: 0;
+
+      box-shadow: none;
+
+      &::before {
+        top: 80px;
+        left: 20px;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+
+    &__profession {
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      margin-left: 15px;
+      padding: 15px;
+
+      box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.05); 
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .testimonals {
+    &__title {
+      top: 40px;
+
+      margin-bottom: 30px;
+
+      font-size: $font-size-24px;
+      line-height: 130%;
+    }
+
+    &__img {
+      top: 55px;
+
+      margin-right: 0;
+      width: 60px;
+      height: 60px;
+    }
+
+    &__wrapper {
+      margin-top: 50px;
+      padding-bottom: 35px;
+    }
+
+    &__content {
+      margin-top: 0;
+      padding: 0 15px;
+
+      &::before,
+      &::after {
+        width: 20px;
+        height: 20px;
+
+        background-size: 20px 20px;
+      }
+
+      &::before {
+        top: 75px;
+        left: 25px;
+      }
+
+      &::after {
+        bottom: -5px;
+        right: 25px;
+      }
+    }
+
+    &__name {
+      margin-bottom: 5px;
+
+      font-size: $font-size-20px;
+      line-height: $line-height-24px;
+    }
+
+    &__profession {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      margin: 0 15px;
+
+      font-size: $font-size-14px;
+    }
+  }
+}
+
+@media (max-width: 385px) {
+  .testimonals {
+    &__content {
+      &::before {
+        top: 95px;
+        left: 25px;
+      }
+    }
+  }
+}

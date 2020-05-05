@@ -1,0 +1,9 @@
+.swiper-container {
+  padding-top: 200px;
+}
+
+@media (max-width: 768px) {
+  .swiper-container {
+    padding-top: 50px;
+  }
+}

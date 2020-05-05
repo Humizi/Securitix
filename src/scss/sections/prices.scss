@@ -1,0 +1,63 @@
+.prices {
+  padding-top: 250px;
+  padding-bottom: 250px;
+
+  text-align: center;
+  color: #fff;
+
+  background-image: url('../assets/img/bg-prices.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: $font-size-48px;
+    line-height: 130%;
+    color: #fff;
+  }
+
+  &__description {
+    max-width: 480px;
+    margin: 0 auto;
+
+    font-size: $font-size-14px;
+    line-height: 150%;
+    font-weight: 300;
+  }
+
+  &__cards {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .prices {
+    &__title {
+      font-size: $font-size-40px;
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .prices {
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    background-image: url('../assets/img/triangle.svg'), url('../assets/img/bg-prices--mobile.png');
+    background-position: 100% 100.2%, 90% 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover;
+
+    &__title {
+      padding-top: 80px;
+
+      font-size: $font-size-24px;
+    }
+
+    &__cards {
+      margin: 0 15px;
+      padding-bottom: 70px;
+    }
+  }
+}

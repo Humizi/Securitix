@@ -1,0 +1,124 @@
+.card {
+  position: relative;
+
+  padding: 40px 70px;
+  padding-top: 130px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 40px;
+    left: calc(50% - 146px/2);
+
+    width: 146px;
+    height: 72px;
+  }
+
+  &--trial {
+    &::before {
+      background-image: url('../assets/img/cup--white.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--pro {
+    background-color: rgba($color: #fff, $alpha: 0.05);
+    border-radius: 10px;
+
+    &::before {
+      background-image: url('../assets/img/cup--gold.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      width: 170px;
+      height: 110px;
+
+      background-image: url('../assets/img/most-popular.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: $font-size-24px;
+    line-height: $line-height-28px;
+    color: #fff;
+  }
+
+  &__subscription {
+    margin-bottom: 10px;
+
+    font-size: $font-size-18px;
+    line-height: 150%;
+    font-weight: 300;
+
+    opacity: 0.5;
+  }
+
+  &__price {
+    margin-bottom: 20px;
+
+    font-size: $font-size-48px;
+    line-height: 130%;
+    font-weight: 300;
+
+    &--pro {
+      color: #ffce46;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 15px;
+
+    list-style: none;
+  }
+
+  &__item {
+    padding: 15px;
+
+    font-size: $font-size-14px;
+    line-height: 150%;
+    font-weight: 300;
+
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+    border-radius: 1.5px;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__button {
+    width: 95px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px 15px;
+
+    font-size: $font-size-14px;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 30px;
+    padding-top: 130px;
+  }
+}

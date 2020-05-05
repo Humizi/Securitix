@@ -1,0 +1,67 @@
+.page-footer {
+  margin-top: 210px;
+  padding: 40px 0;
+
+  border-top: 1px solid rgba($color: $color-black, $alpha: 0.1);
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: $font-size-18px;
+    line-height: $line-height-22px;
+    color: $color-black;
+  }
+
+  &__button--download {
+    font-family: 'Lato', sans-serif;
+    font-size: $font-size-18px;
+    line-height: 22px;
+    color: $color-purple;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  &__copyright {
+    font-size: $font-size-18px;
+    line-height: $line-height-22px;
+    color: rgba($color: $color-black, $alpha: 0.3);
+  }
+}
+
+@media(max-width: 1023px) {
+  .page-footer {
+    margin-top: 50px;
+    padding: 30px 0;
+
+    &__body {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+
+      font-size: 1rem;
+      line-height: $line-height-20px;
+    }
+
+    &__copyright {
+      font-size: 1rem;
+      line-height: $line-height-20px;
+    }
+  }
+}
