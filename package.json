@@ -22,7 +22,7 @@
     "gulp-watch": "^5.0.1",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "sort-css-media-queries": "^1.4.3",
     "gulp-terser": "^1.2.0"
   },
